@@ -5,11 +5,15 @@ Hacer script que lea de una constante un string y liste los nombres de los posib
 nombres asociados a ese string
  */
 
-const axios = require('axios').default;
+import {writeFileSync} from 'fs';
+
+import axios from "axios";
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
 const nombreTrago = 'Blue';
+
+const path = './tragos.json';
 
 async function obtenerNombres() {
     try {
@@ -18,7 +22,8 @@ async function obtenerNombres() {
             const result = response.data;
             if (result != null) {
                 const tragos = result.drinks.map(nombre => nombre.strDrink);
-                console.log(tragos);
+                writeFileSync(path, JSON.stringify(tragos, null, 2), 'utf8');
+                console.log('Data successfully saved to disk.');
             } else {
                 console.log('No hay tragos que tengan ese nombre.');
             }

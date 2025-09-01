@@ -5,8 +5,10 @@ Hacer script con una función que liste SOLO LOS NOMBRES de los países
 con lenguaje espanol.
  */
 
-const axios = require('axios').default;
+import {writeFileSync} from 'fs';
+import axios from "axios";
 const url = 'https://restcountries.com/v3.1/lang/spanish';
+const path = './paises.json';
 
 async function listarPaisesEspanol() {
     try {
@@ -14,7 +16,8 @@ async function listarPaisesEspanol() {
         if (response.status === 200) {
             const result = response.data;
             const paisesEspanol = result.map(pais => pais.name.common);
-            console.log(paisesEspanol);
+            writeFileSync(path, JSON.stringify(paisesEspanol, null, 2), 'utf8');
+            console.log('Data successfully saved to disk.');
         } else {
             console.log(response);
         }
