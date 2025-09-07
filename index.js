@@ -35,6 +35,7 @@ async function obtenerCantidadDePublicaciones(id) {
 }
 
 async function ejecucionSecuencial() {
+    console.time(`Secuencial`);
     try {
         console.log(`--- Ejecucion Secuencial ---`);
         // Obtener lista de usuarios y guardarla en la variable global
@@ -49,9 +50,12 @@ async function ejecucionSecuencial() {
     } catch (e) {
         console.log("Error al ejecutar de forma secuencial.");
     }
+    console.timeEnd(`Secuencial`);
 }
 
 async function ejecucionParalela() {
+    console.time(`Paralela`);
+
     try {
         console.log(`--- Ejecucion Paralela ---`);
         // Obtener lista de usuarios y guardarla en la variable global
@@ -71,6 +75,7 @@ async function ejecucionParalela() {
     } catch (e) {
         console.log("Error al ejecutar de forma secuencial.");
     }
+    console.timeEnd(`Paralela`);
 }
 
 ejecucionSecuencial();
