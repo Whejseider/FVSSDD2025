@@ -81,14 +81,14 @@ export default function PokemonItem({name, url}: PokemonItemProps) {
     return (
         <button
             style={{backgroundColor}}
-            className={`${className} text-white font-semibold rounded-lg shadow-md flex flex-col items-center cursor-pointer group overflow-hidden p-0`}
+            className={`${className} text-white font-semibold rounded-lg shadow-md flex flex-col items-center cursor-pointer group overflow-visible p-0 transition-all duration-300 hover:shadow-xl`}
             onClick={() => setContador(contador + 1)}
         >
-            <div className="w-full px-4 py-3">
-                <img className="relative w-full h-full mx-auto transition-transform duration-500 group-hover:scale-120"
+            <div className="w-full px-4 py-3 overflow-visible">
+                <img className="relative w-full h-full mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
                      src={propiedades.sprites.other['official-artwork'].front_default} alt={name}/>
             </div>
-            <div className="w-full px-4 py-3"
+            <div className="w-full px-4 py-3 rounded-b-lg"
                  style={{
                      backgroundColor: "#232323",
                  }}
