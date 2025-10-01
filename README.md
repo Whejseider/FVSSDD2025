@@ -1,6 +1,8 @@
 # FVSSDD2025
 Repositorio para Sistemas Distribuidos 2025 FI UNMDP
 
+Utilicé PNPM para esta actividad
+
 ## Librerías
 
 Axios: https://axios-http.com/es/docs/intro

@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Por las dudas">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/FVSSDD2025.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/public/diagonal-stripes.svg" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Formato...">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/api/steam/route.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +115,7 @@
       <workItem from="1758846131551" duration="7144000" />
       <workItem from="1758919019777" duration="221000" />
       <workItem from="1759182931786" duration="46000" />
-      <workItem from="1759285882679" duration="10740000" />
+      <workItem from="1759285882679" duration="11183000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -187,7 +173,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758853087228</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Actividad 4">
+      <option name="closed" value="true" />
+      <created>1759297387801</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759297387801</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Formato...">
+      <option name="closed" value="true" />
+      <created>1759297645994</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759297645994</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +206,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/actividad3" />
+                        <option value="origin/actividad4" />
                       </list>
                     </value>
                   </entry>
@@ -224,6 +226,8 @@
     <MESSAGE value="Actividad 2" />
     <MESSAGE value="Agregado medicion de tiempo" />
     <MESSAGE value="Actividad 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actividad 3" />
+    <MESSAGE value="Actividad 4" />
+    <MESSAGE value="Formato..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Formato..." />
   </component>
 </project>
