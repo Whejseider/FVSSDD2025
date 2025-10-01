@@ -15,8 +15,8 @@ export default function Page() {
             />
 
             <div className="relative z-10">
-                <h1 className="text-2xl font-bold text-center mb-8">Lista de Pokemons</h1>
-                <div className="max-w-3xl mx-auto">
+                <h1 className="text-4xl font-bold text-center mb-8">POKÉMON</h1>
+                <div className="max-w-5xl mx-auto">
                     <PokemonList/>
                 </div>
             </div>

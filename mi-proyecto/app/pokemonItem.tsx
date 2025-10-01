@@ -81,16 +81,25 @@ export default function PokemonItem({name, url}: PokemonItemProps) {
     return (
         <button
             style={{backgroundColor}}
-            className={`${className} text-white font-semibold px-4 py-3 rounded-lg shadow-md flex flex-col items-center cursor-pointer group`}
+            className={`${className} text-white font-semibold rounded-lg shadow-md flex flex-col items-center cursor-pointer group overflow-hidden p-0`}
             onClick={() => setContador(contador + 1)}
         >
-            <img className="relative w-full h-full mx-auto transition-transform duration-500 group-hover:scale-120"
-                 src={propiedades.sprites.other['official-artwork'].front_default} alt={name}/>
-            <h3 className="text-xl font-bold">{name.toUpperCase()}</h3>
-            <p className="text-sm">ID: {propiedades.id}</p>
-            <p className="text-sm">Altura: {propiedades.height * 10} cm | Peso: {propiedades.weight / 10} kg</p>
-            <p className="text-sm">Tipo: {propiedades.types.map(t => t.type.name).join(', ')}</p>
-            <p className="text-sm mt-2 bg-gray-900 px-2 py-1 rounded">Clicks: {contador}</p>
+            <div className="w-full px-4 py-3">
+                <img className="relative w-full h-full mx-auto transition-transform duration-500 group-hover:scale-120"
+                     src={propiedades.sprites.other['official-artwork'].front_default} alt={name}/>
+            </div>
+            <div className="w-full px-4 py-3"
+            style={{
+                backgroundColor: "#232323",
+            }}>
+                <h3 className="text-xl font-bold">{name.toUpperCase()}</h3>
+                <p className="text-sm">ID: {propiedades.id}</p>
+                <p className="text-sm">Altura: {propiedades.height * 10} cm | Peso: {propiedades.weight / 10} kg</p>
+                <p className="text-sm">Tipo: {propiedades.types.map(t => t.type.name).join(', ')}</p>
+                <p className="text-sm mt-2 px-2 py-1 rounded" style={{
+                    backgroundColor: '#313131',
+                }}>Clicks: {contador}</p>
+            </div>
         </button>
     );
 }
