@@ -3,22 +3,18 @@ Repositorio para Sistemas Distribuidos 2025 FI UNMDP
 
 ## Librerías
 
-https://swr.vercel.app/docs/with-nextjs
-
-https://www.npmjs.com/package/react-responsive-carousel
+Axios: https://axios-http.com/es/docs/intro
 
 ## Referencias
 
-https://www.geeksforgeeks.org/nextjs/how-to-add-image-carousel-in-next-js/
+Image Hover: https://stackoverflow.com/questions/76238188/pure-tailwind-css-solution-for-image-scale-effect
 
-https://stackoverflow.com/questions/72723954/how-to-center-vertically-and-horizontaly-a-div-with-tailwind-css
+Componentes Tailwind: https://tailwindcss.com/docs
 
-https://nextjs.org/docs/app/getting-started/layouts-and-pages
+Colores oficiales de pokemons: https://gist.github.com/apaleslimghost/0d25ec801ca4fc43317bcff298af43c3
 
-https://nextjs.org/docs/app/getting-started/fetching-data
+Axios y useEffect con try catch (me base en la respuesta): https://stackoverflow.com/questions/76790011/next-js-useeffect-with-axios-and-router-query-returns-old-data-when-changing-the
 
 ## Api utilizada
 
-General: https://github.com/Revadike/InternalSteamWebAPI/wiki/
-
-Featured games: https://github.com/Revadike/InternalSteamWebAPI/wiki/Get-Featured-Apps
+PokeApi: https://pokeapi.co/
