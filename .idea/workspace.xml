@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Cambio color fondo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/public/diagonal-stripes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/public/diagonal-stripes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemonItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemonList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759299847169</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Cambio color fondo">
+      <option name="closed" value="true" />
+      <created>1759299927437</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759299927437</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +250,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="actividad3" />
+                        <option value="actividad4" />
                       </list>
                     </value>
                   </entry>

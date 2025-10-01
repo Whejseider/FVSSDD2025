@@ -9,7 +9,7 @@ type Pokemon = {
     url: string;
 };
 
-const url = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
 
 export default function PokemonList() {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
