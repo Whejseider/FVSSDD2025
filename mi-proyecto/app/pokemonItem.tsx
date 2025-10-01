@@ -89,16 +89,19 @@ export default function PokemonItem({name, url}: PokemonItemProps) {
                      src={propiedades.sprites.other['official-artwork'].front_default} alt={name}/>
             </div>
             <div className="w-full px-4 py-3"
-            style={{
-                backgroundColor: "#232323",
-            }}>
+                 style={{
+                     backgroundColor: "#232323",
+                 }}
+            >
                 <h3 className="text-xl font-bold">{name.toUpperCase()}</h3>
                 <p className="text-sm">ID: {propiedades.id}</p>
                 <p className="text-sm">Altura: {propiedades.height * 10} cm | Peso: {propiedades.weight / 10} kg</p>
                 <p className="text-sm">Tipo: {propiedades.types.map(t => t.type.name).join(', ')}</p>
-                <p className="text-sm mt-2 px-2 py-1 rounded" style={{
-                    backgroundColor: '#313131',
-                }}>Clicks: {contador}</p>
+                <p className="text-sm mt-2 px-2 py-1 rounded"
+                   style={{
+                       backgroundColor: '#313131',
+                   }}
+                >Clicks: {contador}</p>
             </div>
         </button>
     );
