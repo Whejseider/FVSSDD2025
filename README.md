@@ -1,6 +1,8 @@
 # FVSSDD2025
 Repositorio para Sistemas Distribuidos 2025 FI UNMDP
 
+Utilicé PNPM para esta actividad
+
 ## Librerías
 
 https://swr.vercel.app/docs/with-nextjs
