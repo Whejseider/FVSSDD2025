@@ -60,11 +60,11 @@ export default function PokemonItem({name, url}: PokemonItemProps) {
 
     useEffect(() => {
         const fetchData = async () => {
-            try{
+            try {
                 const response = await axios.get(url);
                 const result = response.data;
                 setPropiedades(result);
-            } catch (error){
+            } catch (error) {
                 console.log(error);
             }
         };

@@ -16,11 +16,11 @@ export default function PokemonList() {
 
     useEffect(() => {
         const fetchData = async () => {
-            try{
+            try {
                 const response = await axios.get(url);
                 const result = response.data.results;
                 setPokemons(result);
-            } catch (error){
+            } catch (error) {
                 console.log(error);
             }
         };
