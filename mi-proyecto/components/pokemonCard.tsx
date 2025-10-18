@@ -13,7 +13,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
     const backgroundColor = getTipoColor(tipoPrimario);
 
     return (
-        <Link href={`/pokemon/${pokemon.name}`}>
+        <Link href={`/pokemon/${pokemon.name}`} passHref>
             <button
                 style={{backgroundColor}}
                 className="text-white font-semibold rounded-lg shadow-md
