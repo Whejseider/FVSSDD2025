@@ -18,7 +18,7 @@ export default function Page() {
                 setLoading(true);
                 const pokemonList = await fetchPokemonList(POKEMON_COUNT, OFFSET);
                 const pokemonDetails = await fetchAllPokemonDetails(pokemonList);
-                // const res = await new Promise(res => setTimeout(res, 2000));
+                const res = await new Promise(res => setTimeout(res, 2000));
 
                 setPokemon(pokemonDetails);
             } catch (error) {
