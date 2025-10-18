@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Pagina de detalles del pokemon, separe la carga de datos y el componente principal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/skeletonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/skeletonCard.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Cambios en nombre de funcion de la api para claridad??" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +117,7 @@
       <workItem from="1759182931786" duration="46000" />
       <workItem from="1759285882679" duration="11183000" />
       <workItem from="1760236460719" duration="1118000" />
-      <workItem from="1760828554713" duration="2876000" />
+      <workItem from="1760828554713" duration="3305000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -268,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760830713377</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Cambios esteticos skeletonCard">
+      <option name="closed" value="true" />
+      <created>1760831526805</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1760831526805</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Cambios en nombre de funcion de la api para claridad??">
+      <option name="closed" value="true" />
+      <created>1760831726390</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1760831726390</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +327,8 @@
     <MESSAGE value="NavBar y Footer" />
     <MESSAGE value="Muchos cambios que hice hace tiempo pero ya no me acuerdo" />
     <MESSAGE value="Pagina de detalles del pokemon, separe la carga de datos y el componente principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagina de detalles del pokemon, separe la carga de datos y el componente principal" />
+    <MESSAGE value="Cambios esteticos skeletonCard" />
+    <MESSAGE value="Cambios en nombre de funcion de la api para claridad??" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en nombre de funcion de la api para claridad??" />
   </component>
 </project>
