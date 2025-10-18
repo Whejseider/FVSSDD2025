@@ -1,4 +1,4 @@
-import {fetchPokemon, fetchPokemonSpecies} from "@/lib/api";
+import {fetchPokemonPropiedades, fetchPokemonSpecies} from "@/lib/api";
 import {notFound} from "next/navigation";
 import PokemonDetailPage from "@/app/pokemon/[name]/pokemonDetailPage";
 
@@ -8,7 +8,7 @@ export default async function Page({params}: { params: { name: string } }) {
     try {
 
         const [pokemon, species] = await Promise.all([
-            fetchPokemon(name),
+            fetchPokemonPropiedades(name),
             fetchPokemonSpecies(name)
         ]);
 

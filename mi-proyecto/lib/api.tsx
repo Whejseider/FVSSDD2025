@@ -22,7 +22,7 @@ export async function fetchPokemonList(limit = 30, offset = 0): Promise<Pokemon[
  * Trae los datos más relevantes del pokemon
  * @param name nombre del pokemon
  */
-export async function fetchPokemon(name: string | number): Promise<PokemonPropiedades> {
+export async function fetchPokemonPropiedades(name: string | number): Promise<PokemonPropiedades> {
     try {
         const response = await axios.get(`${BASE_URL}/pokemon/${name}`);
         return response.data;
@@ -52,5 +52,5 @@ export async function fetchPokemonSpecies(name: string): Promise<PokemonSpecies>
  * @param names array de nombres de los pokemon
  */
 export async function fetchAllPokemonDetails(names: Pokemon[]): Promise<PokemonPropiedades[]> {
-    return Promise.all(names.map(p => fetchPokemon(p.name)));
+    return Promise.all(names.map(p => fetchPokemonPropiedades(p.name)));
 }
