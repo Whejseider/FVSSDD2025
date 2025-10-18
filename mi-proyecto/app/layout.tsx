@@ -30,14 +30,26 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
 
-        <header>
+        <header className="relative z-50">
             <NavBar/>
         </header>
 
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow relative pt-20">
+            <div
+                className="absolute inset-0 opacity-10 -z-10"
+                style={{
+                    backgroundImage: "url('/diagonal-stripes.svg')",
+                    backgroundRepeat: 'repeat',
+                    backgroundSize: '300px',
+                }}
+            />
+
+            <div className="relative z-0">
+                {children}
+            </div>
+        </main>
 
         <Footer/>
-
         </body>
         </html>
     );

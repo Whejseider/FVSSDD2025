@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     images: {
         dangerouslyAllowSVG: true,
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+        remotePatterns: [new URL("https://raw.githubusercontent.com/PokeAPI/**")]
     },
 };
 
