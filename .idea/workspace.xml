@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Reestructura">
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Ahora uso el BackButton">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -57,33 +57,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.index.js.executor": "Run",
-    "Node.js.primerEjemplo.js.executor": "Run",
-    "Node.js.secuencial.js.executor": "Debug",
-    "Node.js.segundoEjemplo.js.executor": "Run",
-    "Node.js.test.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "actividad6",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.19.0",
-    "javascript.nodejs.core.library.typings.version": "22.18.0",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.primerEjemplo.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.secuencial.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.segundoEjemplo.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;actividad6&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.19.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.18.0&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
@@ -125,7 +125,8 @@
       <workItem from="1759285882679" duration="11183000" />
       <workItem from="1760236460719" duration="1118000" />
       <workItem from="1760828554713" duration="3541000" />
-      <workItem from="1760924628783" duration="4027000" />
+      <workItem from="1760924628783" duration="6241000" />
+      <workItem from="1760930968107" duration="2176000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -319,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760926837970</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Intento numero 1 de paginacion, quedo mal">
+      <option name="closed" value="true" />
+      <created>1760928999964</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1760928999964</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Ahora uso el BackButton">
+      <option name="closed" value="true" />
+      <created>1760931886570</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1760931886570</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +366,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Un par de ejemplos" />
     <MESSAGE value="Ejercicio Práctico Clase 1" />
     <MESSAGE value="Ejercicio Práctico Clase 2" />
     <MESSAGE value="Agregados archivos npm, modificaciones otras. Hecha la parte de persistencia de la clase 2 para todos los grupos" />
@@ -373,6 +389,8 @@
     <MESSAGE value="TanStack Query" />
     <MESSAGE value="QueryProvider en root layout" />
     <MESSAGE value="Reestructura" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reestructura" />
+    <MESSAGE value="Intento numero 1 de paginacion, quedo mal" />
+    <MESSAGE value="Ahora uso el BackButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ahora uso el BackButton" />
   </component>
 </project>
