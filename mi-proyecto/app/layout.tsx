@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
 import QueryProvider from "@/lib/queryProvider";
+import ScrollToTopButton from "@/components/scrollToTopButton";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
 
                 <div className="relative z-0">
                     {children}
+                    <ScrollToTopButton/>
                 </div>
             </main>
 
