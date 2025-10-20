@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="TanStack Query">
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/lib/queryProvider.tsx" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="QueryProvider en root layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
+      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app\services" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\Clase1\Ejercicio_practico" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\Clase1" />
@@ -122,7 +125,7 @@
       <workItem from="1759285882679" duration="11183000" />
       <workItem from="1760236460719" duration="1118000" />
       <workItem from="1760828554713" duration="3541000" />
-      <workItem from="1760924628783" duration="1104000" />
+      <workItem from="1760924628783" duration="2124000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -300,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760925262558</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="QueryProvider en root layout">
+      <option name="closed" value="true" />
+      <created>1760925773266</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1760925773266</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +363,7 @@
     <MESSAGE value="Cambios en nombre de funcion de la api para claridad??" />
     <MESSAGE value="Olvide de sacar una promesa usada para testear skeleton" />
     <MESSAGE value="TanStack Query" />
-    <option name="LAST_COMMIT_MESSAGE" value="TanStack Query" />
+    <MESSAGE value="QueryProvider en root layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="QueryProvider en root layout" />
   </component>
 </project>
