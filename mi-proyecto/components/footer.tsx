@@ -12,7 +12,7 @@ export default function Footer() {
                           className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src="/favicon.ico" className="h-8" alt="Flowbite Logo"/>
                         <span
-                            className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pokemon</span>
+                            className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pokémon</span>
                     </Link>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>

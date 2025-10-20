@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Load More Infinite Scroll">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Readme">
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/footer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,7 @@
       <workItem from="1760236460719" duration="1118000" />
       <workItem from="1760828554713" duration="3541000" />
       <workItem from="1760924628783" duration="6241000" />
-      <workItem from="1760930968107" duration="3875000" />
+      <workItem from="1760930968107" duration="4040000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -343,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760933192104</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Readme">
+      <option name="closed" value="true" />
+      <created>1760934953254</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1760934953254</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +387,6 @@
     <MESSAGE value="Actividad 3" />
     <MESSAGE value="Actividad 4" />
     <MESSAGE value="Formato..." />
-    <MESSAGE value="Readme" />
     <MESSAGE value="Un poco mejor de diseño, me base en la pagina oficial" />
     <MESSAGE value="Formato" />
     <MESSAGE value="Mejoras diseño" />
@@ -398,6 +404,7 @@
     <MESSAGE value="Intento numero 1 de paginacion, quedo mal" />
     <MESSAGE value="Ahora uso el BackButton" />
     <MESSAGE value="Load More Infinite Scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load More Infinite Scroll" />
+    <MESSAGE value="Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
   </component>
 </project>
