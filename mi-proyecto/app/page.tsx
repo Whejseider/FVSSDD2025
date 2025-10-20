@@ -3,19 +3,23 @@
 import PokemonGrid from "@/app/pokemonGrid";
 import SkeletonCard from "@/components/skeletonCard";
 import {PokemonPropiedades} from "@/lib/types";
-import {useQuery} from "@tanstack/react-query";
+import {keepPreviousData, useQuery} from "@tanstack/react-query";
 import {fetchAllPokemonDetails, fetchPokemonList} from "@/services/pokeApiServices";
+import {useState} from "react";
 
 
 export default function Page() {
-    const POKEMON_COUNT = 30, OFFSET = 0;
+    const [count, setCount] = useState(30);
+    const [offset, setOffset] = useState(0);
 
-    const {data, isLoading, isError, error} = useQuery<PokemonPropiedades[]>({
-        queryKey: ["pokemonList", POKEMON_COUNT, OFFSET],
+    const {data, isLoading, isError, error, isFetching} = useQuery<PokemonPropiedades[]>({
+        queryKey: ["pokemonList", count, offset],
         queryFn: async () => {
-            const pokemonList = await fetchPokemonList(POKEMON_COUNT, OFFSET);
+            const pokemonList = await fetchPokemonList(count, offset);
             return await fetchAllPokemonDetails(pokemonList);
         },
+        placeholderData: keepPreviousData,
+        staleTime: 5000,
     });
 
     if (isLoading) {
@@ -25,7 +29,7 @@ export default function Page() {
                     POKÉDEX
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {Array.from({length: POKEMON_COUNT}).map((_, index) => (
+                    {Array.from({length: count}).map((_, index) => (
                         <SkeletonCard key={index}/>
                     ))}
                 </div>
@@ -48,6 +52,16 @@ export default function Page() {
                 POKÉDEX
             </h1>
             <PokemonGrid pokemon={data!}/>
+
+            <div className="flex justify-center mt-8">
+                <button
+                    onClick={() => setOffset((old) => old + 30)}
+                    disabled={isFetching}
+                    className="px-6 py-2 cursor-pointer  bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-all"
+                >
+                    {isFetching ? "Cargando..." : "Cargar más"}
+                </button>
+            </div>
         </main>
     );
 }

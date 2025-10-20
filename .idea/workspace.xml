@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="QueryProvider en root layout">
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Reestructura">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +125,7 @@
       <workItem from="1759285882679" duration="11183000" />
       <workItem from="1760236460719" duration="1118000" />
       <workItem from="1760828554713" duration="3541000" />
-      <workItem from="1760924628783" duration="2124000" />
+      <workItem from="1760924628783" duration="4027000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -311,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760925773266</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Reestructura">
+      <option name="closed" value="true" />
+      <created>1760926837970</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1760926837970</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +372,7 @@
     <MESSAGE value="Olvide de sacar una promesa usada para testear skeleton" />
     <MESSAGE value="TanStack Query" />
     <MESSAGE value="QueryProvider en root layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="QueryProvider en root layout" />
+    <MESSAGE value="Reestructura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reestructura" />
   </component>
 </project>

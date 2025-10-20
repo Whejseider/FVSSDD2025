@@ -1,6 +1,7 @@
 export type Pokemon = {
     name: string;
     url: string;
+    next: string;
 };
 
 export type PokemonPropiedades = {
