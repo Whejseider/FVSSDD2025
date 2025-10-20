@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Cambios en nombre de funcion de la api para claridad??" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Olvide de sacar una promesa usada para testear skeleton">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +119,8 @@
       <workItem from="1759182931786" duration="46000" />
       <workItem from="1759285882679" duration="11183000" />
       <workItem from="1760236460719" duration="1118000" />
-      <workItem from="1760828554713" duration="3305000" />
+      <workItem from="1760828554713" duration="3541000" />
+      <workItem from="1760924628783" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -279,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760831726390</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Olvide de sacar una promesa usada para testear skeleton">
+      <option name="closed" value="true" />
+      <created>1760831974518</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1760831974518</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +340,7 @@
     <MESSAGE value="Pagina de detalles del pokemon, separe la carga de datos y el componente principal" />
     <MESSAGE value="Cambios esteticos skeletonCard" />
     <MESSAGE value="Cambios en nombre de funcion de la api para claridad??" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en nombre de funcion de la api para claridad??" />
+    <MESSAGE value="Olvide de sacar una promesa usada para testear skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Olvide de sacar una promesa usada para testear skeleton" />
   </component>
 </project>
