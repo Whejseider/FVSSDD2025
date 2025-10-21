@@ -1,12 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
+import {FavoritePokemon} from "@/lib/types/favorites/favorites";
 
 const DB_PATH = path.join(process.cwd(), "database.json");
-
-export interface FavoritePokemon {
-    id: number;
-    name: string;
-}
 
 class Database {
     private async readDB(): Promise<FavoritePokemon[]> {
@@ -37,7 +33,11 @@ class Database {
 
         const newFavoritePokemon: FavoritePokemon = {
             id: pokemon.id,
-            name: pokemon.name
+            name: pokemon.name,
+            sprite: pokemon.sprite,
+            types: pokemon.types,
+            height: pokemon.height,
+            weight: pokemon.weight,
         };
 
         data.push(newFavoritePokemon);
@@ -73,3 +73,4 @@ class Database {
 }
 
 export const db = new Database();
+

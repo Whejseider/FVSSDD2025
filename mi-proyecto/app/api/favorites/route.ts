@@ -35,7 +35,11 @@ export async function POST(request: Request) {
 
         const newFavoritePokemon = await db.create({
             id: body.id,
-            name: body.name
+            name: body.name,
+            sprite: body.sprite,
+            types: body.types,
+            height: body.height,
+            weight: body.weight,
         });
 
         return NextResponse.json(newFavoritePokemon, {status: 201});

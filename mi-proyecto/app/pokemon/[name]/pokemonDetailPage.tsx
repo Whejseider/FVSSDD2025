@@ -2,7 +2,7 @@
 
 import {getTipoColor} from "@/lib/utils";
 import Image from "next/image";
-import {PokemonPropiedades, PokemonSpecies} from "@/lib/types";
+import {PokemonPropiedades, PokemonSpecies} from "@/lib/types/types";
 import BackButton from "@/components/backButton";
 
 type Props = {

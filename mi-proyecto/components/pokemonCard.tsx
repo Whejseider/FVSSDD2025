@@ -1,11 +1,11 @@
 import Link from "next/link";
-import {PokemonPropiedades} from "@/lib/types";
 import {getTipoColor} from "@/lib/utils";
 import Image from "next/image";
 import {useAddFavorite, useDeleteFavorite, useFavoritesPokemon} from "@/app/hooks/useFavorites";
-import {FavoritePokemon} from "@/lib/database";
 import {Heart, LoaderCircle} from "lucide-react";
 import {useState} from "react";
+import {FavoritePokemon, toFavoritePokemon} from "@/lib/types/favorites/favorites";
+import {PokemonPropiedades} from "@/lib/types/types";
 
 type PokemonCardProps = {
     pokemon: PokemonPropiedades;
@@ -34,7 +34,8 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
             if (isFavorite) {
                 await removeFavorite.mutateAsync(pokemon.id);
             } else {
-                await addFavorite.mutateAsync({id: pokemon.id, name: pokemon.name});
+                const favData = toFavoritePokemon(pokemon);
+                await addFavorite.mutateAsync(favData);
             }
         } catch (err) {
             setError(isFavorite ? "Error al quitar de favoritos" : "Error al agregar a favoritos");

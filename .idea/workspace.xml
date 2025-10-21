@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Boton favorito">
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/[id]/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/hooks/useFavorites.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Boton favorito ahora si funciona, agrega y elimina, uso de Optimistic Update">
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/lib/types/favorites/favorites.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/hooks/useFavorites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/hooks/useFavorites.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/pokemonDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/pokemonDetailPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/navBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/navBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/database.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/types/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/utils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -96,11 +99,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\lib\types" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app\services" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\Clase1\Ejercicio_practico" />
-      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\Clase1" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -138,7 +141,7 @@
       <workItem from="1760924628783" duration="6241000" />
       <workItem from="1760930968107" duration="5427000" />
       <workItem from="1761017818752" duration="8566000" />
-      <workItem from="1761067729894" duration="1607000" />
+      <workItem from="1761067729894" duration="3290000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -404,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761022136989</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Boton favorito ahora si funciona, agrega y elimina, uso de Optimistic Update">
+      <option name="closed" value="true" />
+      <created>1761069599686</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1761069599686</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Actividad 3" />
     <MESSAGE value="Actividad 4" />
     <MESSAGE value="Formato..." />
     <MESSAGE value="Un poco mejor de diseño, me base en la pagina oficial" />
@@ -459,6 +469,7 @@
     <MESSAGE value="Readme" />
     <MESSAGE value="Database" />
     <MESSAGE value="Boton favorito" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boton favorito" />
+    <MESSAGE value="Boton favorito ahora si funciona, agrega y elimina, uso de Optimistic Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boton favorito ahora si funciona, agrega y elimina, uso de Optimistic Update" />
   </component>
 </project>

@@ -30,6 +30,16 @@ export default function NavBar() {
                                 Inicio
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/"
+                                className={`block py-2 px-3 rounded-md transition-colors 
+                                   ${pathname === "/favorites"
+                                    ? "bg-blue-800 text-white"
+                                    : "text-gray-300 hover:bg-gray-600 hover:text-white"}`}>
+                                Favoritos
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

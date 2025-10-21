@@ -1,5 +1,5 @@
 import PokemonCard from "@/components/pokemonCard";
-import {PokemonPropiedades} from "@/lib/types";
+import {PokemonPropiedades} from "@/lib/types/types";
 
 type PokemonGridProps = {
     pokemon: PokemonPropiedades[];

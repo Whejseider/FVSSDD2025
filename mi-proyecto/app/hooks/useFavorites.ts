@@ -2,7 +2,7 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {favoritesPokemonService} from "@/services/favorites.service";
-import {FavoritePokemon} from "@/lib/database";
+import {FavoritePokemon} from "@/lib/types/favorites/favorites";
 
 export function useFavoritesPokemon() {
     return useQuery({

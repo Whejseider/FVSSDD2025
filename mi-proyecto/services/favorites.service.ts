@@ -1,4 +1,4 @@
-import {FavoritePokemon} from "@/lib/database";
+import {FavoritePokemon} from "@/lib/types/favorites/favorites";
 
 export const favoritesPokemonService = {
     getAll: async (): Promise<FavoritePokemon[]> => {
@@ -9,7 +9,11 @@ export const favoritesPokemonService = {
 
     add: async (favoritePokemon: {
         id: number,
-        name: string;
+        name: string,
+        sprite: string,
+        types: string[],
+        height: number,
+        weight: number,
     }): Promise<FavoritePokemon> => {
         const res = await fetch("/api/favorites", {
             method: "POST",
