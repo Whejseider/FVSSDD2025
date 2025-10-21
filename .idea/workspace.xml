@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Readme">
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.tsx" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Boton favorito">
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/[id]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/hooks/useFavorites.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/database.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -57,33 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.index.js.executor": "Run",
-    "Node.js.primerEjemplo.js.executor": "Run",
-    "Node.js.secuencial.js.executor": "Debug",
-    "Node.js.segundoEjemplo.js.executor": "Run",
-    "Node.js.test.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "actividad7",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.19.0",
-    "javascript.nodejs.core.library.typings.version": "22.18.0",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.primerEjemplo.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.secuencial.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.segundoEjemplo.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;actividad7&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.19.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.18.0&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
@@ -127,7 +137,8 @@
       <workItem from="1760828554713" duration="3541000" />
       <workItem from="1760924628783" duration="6241000" />
       <workItem from="1760930968107" duration="5427000" />
-      <workItem from="1761017818752" duration="918000" />
+      <workItem from="1761017818752" duration="8566000" />
+      <workItem from="1761067729894" duration="1607000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -377,7 +388,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760936439391</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Database">
+      <option name="closed" value="true" />
+      <created>1761018754662</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1761018754663</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Boton favorito">
+      <option name="closed" value="true" />
+      <created>1761022136988</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1761022136989</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Actividad 2" />
-    <MESSAGE value="Agregado medicion de tiempo" />
     <MESSAGE value="Actividad 3" />
     <MESSAGE value="Actividad 4" />
     <MESSAGE value="Formato..." />
@@ -432,6 +457,8 @@
     <MESSAGE value="Consistencia en footer" />
     <MESSAGE value="Scroll To Top" />
     <MESSAGE value="Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
+    <MESSAGE value="Database" />
+    <MESSAGE value="Boton favorito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boton favorito" />
   </component>
 </project>

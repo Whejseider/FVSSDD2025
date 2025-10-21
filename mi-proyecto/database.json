@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "id": 5,
+    "name": "charmeleon"
+  },
+  {
+    "id": 6,
+    "name": "charizard"
+  },
+  {
+    "id": 11,
+    "name": "metapod"
+  },
+  {
+    "id": 12,
+    "name": "butterfree"
+  },
+  {
+    "id": 15,
+    "name": "beedrill"
+  },
+  {
+    "id": 16,
+    "name": "pidgey"
+  },
+  {
+    "id": 17,
+    "name": "pidgeotto"
+  },
+  {
+    "id": 13,
+    "name": "weedle"
+  },
+  {
+    "id": 14,
+    "name": "kakuna"
+  },
+  {
+    "id": 39,
+    "name": "jigglypuff"
+  },
+  {
+    "id": 43,
+    "name": "oddish"
+  },
+  {
+    "id": 63,
+    "name": "abra"
+  },
+  {
+    "id": 76,
+    "name": "golem"
+  },
+  {
+    "id": 56,
+    "name": "mankey"
+  },
+  {
+    "id": 44,
+    "name": "gloom"
+  },
+  {
+    "id": 9,
+    "name": "blastoise"
+  },
+  {
+    "id": 2,
+    "name": "ivysaur"
+  },
+  {
+    "id": 1,
+    "name": "bulbasaur"
+  },
+  {
+    "id": 3,
+    "name": "venusaur"
+  },
+  {
+    "id": 4,
+    "name": "charmander"
+  }
+]

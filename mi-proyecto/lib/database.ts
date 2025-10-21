@@ -3,13 +3,13 @@ import path from "path";
 
 const DB_PATH = path.join(process.cwd(), "database.json");
 
-export interface Pokemon {
+export interface FavoritePokemon {
     id: number;
     name: string;
 }
 
 class Database {
-    private async readDB(): Promise<Pokemon[]> {
+    private async readDB(): Promise<FavoritePokemon[]> {
         try {
             const data = await fs.readFile(DB_PATH, "utf-8");
             return JSON.parse(data);
@@ -19,28 +19,30 @@ class Database {
         }
     }
 
-    private async writeDB(data: Pokemon[]): Promise<void> {
+    private async writeDB(data: FavoritePokemon[]): Promise<void> {
         await fs.writeFile(DB_PATH, JSON.stringify(data, null, 2));
     }
 
-    async getAll(): Promise<Pokemon[]> {
+    async getAll(): Promise<FavoritePokemon[]> {
         return await this.readDB();
     }
 
-    async getById(id: number): Promise<Pokemon | undefined> {
+    async getById(id: number): Promise<FavoritePokemon | undefined> {
         const data = await this.readDB();
         return data.find((item) => item.id === id);
     }
 
-    async create(pokemon: Omit<Pokemon, "id">): Promise<Pokemon> {
+    async create(pokemon: FavoritePokemon): Promise<FavoritePokemon> {
         const data = await this.readDB();
-        const newPokemon: Pokemon = {
-            id: data.length > 0 ? Math.max(...data.map((p) => p.id)) + 1 : 1,
-            ...pokemon,
+
+        const newFavoritePokemon: FavoritePokemon = {
+            id: pokemon.id,
+            name: pokemon.name
         };
-        data.push(newPokemon);
+
+        data.push(newFavoritePokemon);
         await this.writeDB(data);
-        return newPokemon;
+        return newFavoritePokemon;
     }
 
     async delete(id: number): Promise<boolean> {
@@ -56,7 +58,7 @@ class Database {
         return true;
     }
 
-    async update(id: number, updates: Partial<Omit<Pokemon, "id">>): Promise<Pokemon | null> {
+    async update(id: number, updates: Partial<Omit<FavoritePokemon, "id">>): Promise<FavoritePokemon | null> {
         const data = await this.readDB();
         const index = data.findIndex((item) => item.id === id);
 
