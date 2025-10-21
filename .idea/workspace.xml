@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Consistencia en footer">
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/components/scrollToTopButton.tsx" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Readme">
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="actividad5" />
+        <entry key="$PROJECT_DIR$" value="actividad6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,33 +57,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.primerEjemplo.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.secuencial.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.segundoEjemplo.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;actividad6&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.19.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.18.0&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.index.js.executor": "Run",
+    "Node.js.primerEjemplo.js.executor": "Run",
+    "Node.js.secuencial.js.executor": "Debug",
+    "Node.js.segundoEjemplo.js.executor": "Run",
+    "Node.js.test.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "actividad7",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.19.0",
+    "javascript.nodejs.core.library.typings.version": "22.18.0",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
@@ -126,7 +126,8 @@
       <workItem from="1760236460719" duration="1118000" />
       <workItem from="1760828554713" duration="3541000" />
       <workItem from="1760924628783" duration="6241000" />
-      <workItem from="1760930968107" duration="5352000" />
+      <workItem from="1760930968107" duration="5427000" />
+      <workItem from="1761017818752" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -360,7 +361,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760935063235</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Scroll To Top">
+      <option name="closed" value="true" />
+      <created>1760936388978</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1760936388978</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Readme">
+      <option name="closed" value="true" />
+      <created>1760936439391</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1760936439391</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +394,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="actividad6" />
+                        <option value="actividad7" />
                       </list>
                     </value>
                   </entry>
@@ -390,7 +407,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Agregados archivos npm, modificaciones otras. Hecha la parte de persistencia de la clase 2 para todos los grupos" />
     <MESSAGE value="Actividad 2" />
     <MESSAGE value="Agregado medicion de tiempo" />
     <MESSAGE value="Actividad 3" />
@@ -413,8 +429,9 @@
     <MESSAGE value="Intento numero 1 de paginacion, quedo mal" />
     <MESSAGE value="Ahora uso el BackButton" />
     <MESSAGE value="Load More Infinite Scroll" />
-    <MESSAGE value="Readme" />
     <MESSAGE value="Consistencia en footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consistencia en footer" />
+    <MESSAGE value="Scroll To Top" />
+    <MESSAGE value="Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
   </component>
 </project>
