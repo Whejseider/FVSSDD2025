@@ -86,7 +86,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                 <div className="relative flex justify-center w-full px-4 py-3 rounded-b-lg">
                     <h3 className="text-xl font-bold">{pokemon.name.toUpperCase()}</h3>
 
-                    {/* Botón de favorito con estados */}
+                    {/* Botón de favorito */}
                     <button
                         onClick={handleToggleFavorite}
                         disabled={isLoading}
