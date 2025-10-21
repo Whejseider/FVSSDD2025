@@ -59,7 +59,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                 </div>
             )}
 
-            <Link href={`/pokemon/${pokemon.name}`} passHref>
+            <Link href={`/pokemon/${pokemon.id}`} passHref>
                 <article
                     style={{backgroundColor}}
                     className="rounded-t-lg shadow-md

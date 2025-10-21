@@ -52,7 +52,7 @@ export default function FavoritePokemonCard({pokemon}: FavoritePokemonCardProps)
                 </div>
             )}
 
-            <Link href={`/pokemon/${pokemon.name}`} passHref>
+            <Link href={`/pokemon/${pokemon.id}`} passHref>
                 <article
                     style={{backgroundColor}}
                     className="rounded-t-lg shadow-md

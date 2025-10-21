@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Agrego mas datos a la bd">
-      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteCard.tsx" afterDir="false" />
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Se pueden agregar o remover de favoritos de la pagina de detalles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/favorites/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/navBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/navBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/pokemonDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/pokemonDetailPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/types/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,34 +65,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.primerEjemplo.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.secuencial.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.segundoEjemplo.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;actividad7&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.19.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.18.0&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.index.js.executor": "Run",
+    "Node.js.primerEjemplo.js.executor": "Run",
+    "Node.js.secuencial.js.executor": "Debug",
+    "Node.js.segundoEjemplo.js.executor": "Run",
+    "Node.js.test.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "actividad7",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.19.0",
+    "javascript.nodejs.core.library.typings.version": "22.18.0",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Franco/WebstormProjects/FVSSDD2025/mi-proyecto/app/pokemon",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Franco/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.19.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\Franco\\WebstormProjects\\FVSSDD2025\\mi-proyecto\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app\pokemon" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\lib\types" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
@@ -137,7 +140,8 @@
       <workItem from="1760924628783" duration="6241000" />
       <workItem from="1760930968107" duration="5427000" />
       <workItem from="1761017818752" duration="8566000" />
-      <workItem from="1761067729894" duration="5689000" />
+      <workItem from="1761067729894" duration="5840000" />
+      <workItem from="1761073648462" duration="3232000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -419,7 +423,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761071090829</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Página de favoritos">
+      <option name="closed" value="true" />
+      <created>1761073604816</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1761073604816</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Se pueden agregar o remover de favoritos de la pagina de detalles">
+      <option name="closed" value="true" />
+      <created>1761074895974</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1761074895974</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,8 +469,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Formato..." />
-    <MESSAGE value="Un poco mejor de diseño, me base en la pagina oficial" />
     <MESSAGE value="Formato" />
     <MESSAGE value="Mejoras diseño" />
     <MESSAGE value="Cambio color fondo" />
@@ -474,6 +492,8 @@
     <MESSAGE value="Boton favorito" />
     <MESSAGE value="Boton favorito ahora si funciona, agrega y elimina, uso de Optimistic Update" />
     <MESSAGE value="Agrego mas datos a la bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego mas datos a la bd" />
+    <MESSAGE value="Página de favoritos" />
+    <MESSAGE value="Se pueden agregar o remover de favoritos de la pagina de detalles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se pueden agregar o remover de favoritos de la pagina de detalles" />
   </component>
 </project>
