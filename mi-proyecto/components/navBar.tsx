@@ -32,7 +32,7 @@ export default function NavBar() {
                         </li>
                         <li>
                             <Link
-                                href="/"
+                                href="/favorites"
                                 className={`block py-2 px-3 rounded-md transition-colors 
                                    ${pathname === "/favorites"
                                     ? "bg-blue-800 text-white"

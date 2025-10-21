@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Pokemon, PokemonPropiedades, PokemonSpecies } from "@/lib/types";
+import { Pokemon, PokemonPropiedades, PokemonSpecies } from "@/lib/types/types";
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
 

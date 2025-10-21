@@ -1,49 +1,42 @@
 import Link from "next/link";
-import {PokemonPropiedades} from "@/lib/types/types";
 import {getTipoColor} from "@/lib/utils";
 import Image from "next/image";
-import {useAddFavorite, useDeleteFavorite, useFavoritesPokemon} from "@/app/hooks/useFavorites";
+import {useDeleteFavorite, useFavoritesPokemon} from "@/app/hooks/useFavorites";
 import {Heart, LoaderCircle} from "lucide-react";
 import {useState} from "react";
-import {FavoritePokemon, toFavoritePokemon} from "@/lib/types/favorites/favorites";
+import {FavoritePokemon} from "@/lib/types/favorites/favorites";
 
-type PokemonCardProps = {
-    pokemon: PokemonPropiedades;
+type FavoritePokemonCardProps = {
+    pokemon: FavoritePokemon;
 };
 
-export default function PokemonCard({pokemon}: PokemonCardProps) {
+export default function FavoritePokemonCard({pokemon}: FavoritePokemonCardProps) {
     const {data: favoritesPokemon = []} = useFavoritesPokemon();
     const [error, setError] = useState<string | null>(null);
 
-    const addFavorite = useAddFavorite();
     const removeFavorite = useDeleteFavorite();
 
     const isFavorite = favoritesPokemon.some(
         (favPokemon: FavoritePokemon) => favPokemon.id === pokemon.id
     );
 
-    const isLoading = addFavorite.isPending || removeFavorite.isPending;
+    const isLoading = removeFavorite.isPending;
 
-    const handleToggleFavorite = async (e: React.MouseEvent) => {
+    const handleRemoveFavorite = async (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
 
         setError(null);
 
         try {
-            if (isFavorite) {
-                await removeFavorite.mutateAsync(pokemon.id);
-            } else {
-                const favData = toFavoritePokemon(pokemon);
-                await addFavorite.mutateAsync(favData);
-            }
+            await removeFavorite.mutateAsync(pokemon.id);
         } catch (err) {
-            setError(isFavorite ? "Error al quitar de favoritos" : "Error al agregar a favoritos");
+            setError("Error al quitar de favoritos");
             setTimeout(() => setError(null), 3000);
         }
     };
 
-    const tipoPrimario = pokemon.types[0].type.name;
+    const tipoPrimario = pokemon.types[0];
     const backgroundColor = getTipoColor(tipoPrimario);
 
     return (
@@ -52,7 +45,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
         max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700
         flex flex-col items-center relative
         ">
-            {/* Mensaje de error: testear que funcione */}
+
             {error && (
                 <div className="absolute top-2 left-2 right-2 bg-red-500 text-white text-xs px-3 py-2 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-300">
                     {error}
@@ -69,7 +62,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                     <div className="w-full px-4 py-3 overflow-visible flex-grow">
                         <Image
                             className="relative h-full w-full mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
-                            src={pokemon.sprites.other['official-artwork'].front_default}
+                            src={pokemon.sprite}
                             alt={pokemon.name}
                             height={300}
                             width={300}
@@ -86,12 +79,11 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                 <div className="relative flex justify-center w-full px-4 py-3 rounded-b-lg">
                     <h3 className="text-xl font-bold">{pokemon.name.toUpperCase()}</h3>
 
-                    {/* Botón de favorito con estados */}
                     <button
-                        onClick={handleToggleFavorite}
+                        onClick={handleRemoveFavorite}
                         disabled={isLoading}
                         className="absolute right-1 top-1/2 -translate-y-1/2 disabled:cursor-not-allowed"
-                        aria-label={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
+                        aria-label="Quitar de favoritos"
                     >
                         {isLoading ? (
                             <LoaderCircle className="size-7 animate-spin text-gray-400" />
@@ -107,7 +99,6 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                             />
                         )}
                     </button>
-
                 </div>
 
                 <p className="text-sm">N.° {pokemon.id.toString().padStart(4, '0')}</p>
@@ -115,13 +106,13 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                     Altura: {pokemon.height * 10} cm | Peso: {pokemon.weight / 10} kg
                 </p>
                 <div className="flex gap-2 flex-wrap justify-center mt-2">
-                    {pokemon.types.map(t => (
+                    {pokemon.types.map(type => (
                         <span
-                            key={t.type.name}
+                            key={type}
                             className="px-3 py-1 rounded-full text-white text-xs md:text-sm font-semibold"
-                            style={{backgroundColor: getTipoColor(t.type.name)}}
+                            style={{backgroundColor: getTipoColor(type)}}
                         >
-                            {t.type.name.toUpperCase()}
+                            {type.toUpperCase()}
                         </span>
                     ))}
                 </div>

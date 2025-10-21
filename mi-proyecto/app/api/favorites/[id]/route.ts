@@ -1,18 +1,19 @@
-import { NextResponse } from "next/server";
-import { db } from "@/lib/database";
+import {NextResponse} from "next/server";
+import {db} from "@/lib/database";
 
 export async function DELETE(
     request: Request,
-    { params }: { params: { id: string } }
+    {params}: { params: { id: string } }
 ) {
     try {
-        const id = parseInt(params.id);
+        const param = await params;
+        const id = parseInt(param.id);
 
         // Validar que sea un número válido
         if (isNaN(id)) {
             return NextResponse.json(
-                { error: "ID inválido" },
-                { status: 400 }
+                {error: "ID inválido"},
+                {status: 400}
             );
         }
 
@@ -20,19 +21,19 @@ export async function DELETE(
 
         if (!deleted) {
             return NextResponse.json(
-                { error: "Pokémon no encontrado" },
-                { status: 404 }
+                {error: "Pokémon no encontrado"},
+                {status: 404}
             );
         }
 
         return NextResponse.json(
-            { message: "Pokémon eliminado correctamente" },
-            { status: 200 }
+            {message: "Pokémon eliminado correctamente"},
+            {status: 200}
         );
     } catch (error) {
         return NextResponse.json(
-            { error: "Error al eliminar pokémon" },
-            { status: 500 }
+            {error: "Error al eliminar pokémon"},
+            {status: 500}
         );
     }
 }
