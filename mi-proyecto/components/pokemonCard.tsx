@@ -4,8 +4,12 @@ import {getTipoColor} from "@/lib/utils";
 import Image from "next/image";
 import {useAddFavorite, useDeleteFavorite, useFavoritesPokemon} from "@/app/hooks/useFavorites";
 import {Heart, LoaderCircle} from "lucide-react";
-import {useState} from "react";
+import React, {useState} from "react";
 import {FavoritePokemon, toFavoritePokemon} from "@/lib/types/favorites/favorites";
+import {FormValues} from "@/validations/favoritePokemonValidation";
+import {useDisclosure} from "@heroui/modal";
+import PokemonFavoriteModal from "@/app/favorites/components/pokemonFavoriteModal";
+import {addToast} from "@heroui/toast";
 
 type PokemonCardProps = {
     pokemon: PokemonPropiedades;
@@ -14,6 +18,7 @@ type PokemonCardProps = {
 export default function PokemonCard({pokemon}: PokemonCardProps) {
     const {data: favoritesPokemon = []} = useFavoritesPokemon();
     const [error, setError] = useState<string | null>(null);
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     const addFavorite = useAddFavorite();
     const removeFavorite = useDeleteFavorite();
@@ -30,16 +35,61 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
 
         setError(null);
 
-        try {
-            if (isFavorite) {
+        if (isFavorite) {
+            try {
                 await removeFavorite.mutateAsync(pokemon.id);
-            } else {
-                const favData = toFavoritePokemon(pokemon);
-                await addFavorite.mutateAsync(favData);
+            } catch (err) {
+                setError("Error al quitar de favoritos");
+                setTimeout(() => setError(null), 3000);
+            }
+        } else {
+            onOpen();
+        }
+    };
+
+    const handleFormSuccess = async (values: FormValues) => {
+        try {
+            const favData = toFavoritePokemon(pokemon, values.name || "", values.description || "");
+            await addFavorite.mutateAsync(favData);
+            {
+                addToast({
+                    title: "FAVORITOS",
+                    description: `El pokemon ${pokemon.name} se agregó correctamente a favoritos!`,
+                    color: "success",
+                    variant: "bordered",
+                    icon: (
+                        <Image
+                            src={pokemon.sprites.other["official-artwork"].front_default}
+                            alt={pokemon.name}
+                            height={50}
+                            width={50}
+                        />
+                    ),
+                    classNames: {
+                        closeButton: "opacity-100 absolute right-4 top-1/2 -translate-y-1/2",
+                    },
+                    closeIcon: (
+                        <svg
+                            fill="none"
+                            height="32"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            width="32"
+                        >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    ),
+
+                });
             }
         } catch (err) {
-            setError(isFavorite ? "Error al quitar de favoritos" : "Error al agregar a favoritos");
+            setError("Error al agregar a favoritos");
             setTimeout(() => setError(null), 3000);
+            throw err;
         }
     };
 
@@ -52,27 +102,35 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
         max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700
         flex flex-col items-center relative
         ">
-            {/* Mensaje de error: testear que funcione */}
+            {/* TODO Mensaje de error */}
             {error && (
-                <div className="absolute top-2 left-2 right-2 bg-red-500 text-white text-xs px-3 py-2 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-300">
+                <div
+                    className="absolute top-2 left-2 right-2 bg-red-500 text-white text-xs px-3 py-2 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-300">
                     {error}
                 </div>
             )}
 
-            <Link href={`/pokemon/${pokemon.id}`} passHref>
+            <Link href={`/pokemon/${pokemon.id}`} passHref className="w-full block">
                 <article
                     style={{backgroundColor}}
-                    className="rounded-t-lg shadow-md
-                 cursor-pointer group overflow-visible p-0
-                transition-all duration-300 hover:shadow-xl hover:brightness-110 w-full"
+                    className="rounded-t-lg
+                 cursor-pointer group overflow-hidden
+                transition-all duration-300 hover:brightness-110 w-full h-[300px] flex items-center justify-center"
                 >
-                    <div className="w-full px-4 py-3 overflow-visible flex-grow">
+                    <div className="relative w-full h-full flex items-center justify-center px-4 py-3">
                         <Image
-                            className="relative h-full w-full mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
+                            className="object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
                             src={pokemon.sprites.other['official-artwork'].front_default}
                             alt={pokemon.name}
                             height={300}
                             width={300}
+                            loading="lazy"
+                            style={{
+                                maxWidth: '100%',
+                                maxHeight: '100%',
+                                width: 'auto',
+                                height: 'auto',
+                            }}
                         />
                     </div>
                 </article>
@@ -94,7 +152,7 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                         aria-label={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
                     >
                         {isLoading ? (
-                            <LoaderCircle className="size-7 animate-spin text-gray-400" />
+                            <LoaderCircle className="size-7 animate-spin text-gray-400"/>
                         ) : (
                             <Heart
                                 className={`size-7 cursor-pointer 
@@ -126,6 +184,13 @@ export default function PokemonCard({pokemon}: PokemonCardProps) {
                     ))}
                 </div>
             </div>
+
+            <PokemonFavoriteModal
+                isOpen={isOpen}
+                onOpenChange={onOpenChange}
+                pokemon={pokemon}
+                onSuccess={handleFormSuccess}
+            />
         </div>
     );
 }

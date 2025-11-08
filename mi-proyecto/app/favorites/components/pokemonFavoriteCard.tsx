@@ -43,7 +43,7 @@ export default function FavoritePokemonCard({pokemon}: FavoritePokemonCardProps)
         <div className="
         text-white font-semibold
         max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700
-        flex flex-col items-center relative
+        flex flex-col items-center relative overflow-hidden h-full
         ">
 
             {error && (
@@ -52,32 +52,49 @@ export default function FavoritePokemonCard({pokemon}: FavoritePokemonCardProps)
                 </div>
             )}
 
-            <Link href={`/pokemon/${pokemon.id}`} passHref>
+            <Link href={`/pokemon/${pokemon.id}`} passHref className="w-full block">
                 <article
                     style={{backgroundColor}}
-                    className="rounded-t-lg shadow-md
-                 cursor-pointer group overflow-visible p-0
-                transition-all duration-300 hover:shadow-xl hover:brightness-110 w-full"
+                    className="rounded-t-lg
+                 cursor-pointer group overflow-hidden
+                transition-all duration-300 hover:brightness-110 w-full h-[300px] flex items-center justify-center"
                 >
-                    <div className="w-full px-4 py-3 overflow-visible flex-grow">
+                    <div className="relative w-full h-full flex items-center justify-center px-4 py-3">
                         <Image
-                            className="relative h-full w-full mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
+                            className="object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-2"
                             src={pokemon.sprite}
                             alt={pokemon.name}
                             height={300}
                             width={300}
+                            priority
+                            style={{
+                                maxWidth: '100%',
+                                maxHeight: '100%',
+                                width: 'auto',
+                                height: 'auto',
+                            }}
                         />
                     </div>
                 </article>
             </Link>
 
-            {/* Contenido */}
             <div
-                className="flex flex-col items-center w-full px-4 py-3 rounded-b-lg"
+                className="flex flex-col items-center w-full px-4 py-3 rounded-b-lg flex-1"
                 style={{backgroundColor: "#232323"}}
             >
-                <div className="relative flex justify-center w-full px-4 py-3 rounded-b-lg">
-                    <h3 className="text-xl font-bold">{pokemon.name.toUpperCase()}</h3>
+                <div className="relative flex justify-center w-full py-3">
+                    <div className="flex flex-col items-center w-full px-8">
+                        <h3 className="text-xl font-bold text-center break-words w-full">
+                            {(pokemon.alias && pokemon.alias.trim() !== "")
+                                ? pokemon.alias.toUpperCase()
+                                : pokemon.name.toUpperCase()}
+                        </h3>
+                        {pokemon.alias && pokemon.alias.trim() !== "" && (
+                            <p className="text-xs text-gray-400 mt-1 text-center break-words w-full">
+                                {pokemon.name.toUpperCase()}
+                            </p>
+                        )}
+                    </div>
 
                     <button
                         onClick={handleRemoveFavorite}
@@ -102,6 +119,15 @@ export default function FavoritePokemonCard({pokemon}: FavoritePokemonCardProps)
                 </div>
 
                 <p className="text-sm">N.° {pokemon.id.toString().padStart(4, '0')}</p>
+
+                <div className="min-h-[60px] flex items-center justify-center w-full px-2 my-2">
+                    {pokemon.description && pokemon.description.trim() !== "" ? (
+                        <p className="text-sm text-gray-300 italic text-center break-words overflow-wrap-anywhere w-full line-clamp-3">
+                            "{pokemon.description}"
+                        </p>
+                    ) : null}
+                </div>
+
                 <p className="text-sm">
                     Altura: {pokemon.height * 10} cm | Peso: {pokemon.weight / 10} kg
                 </p>

@@ -5,9 +5,13 @@ import Image from "next/image";
 import {PokemonPropiedades, PokemonSpecies} from "@/lib/types/types";
 import BackButton from "@/components/backButton";
 import {useAddFavorite, useDeleteFavorite, useFavoritesPokemon} from "@/app/hooks/useFavorites";
-import {useState} from "react";
+import React, {useState} from "react";
 import {FavoritePokemon, toFavoritePokemon} from "@/lib/types/favorites/favorites";
 import {Heart, LoaderCircle} from "lucide-react";
+import {FormValues} from "@/validations/favoritePokemonValidation";
+import PokemonFavoriteModal from "@/app/favorites/components/pokemonFavoriteModal";
+import {useDisclosure} from "@heroui/modal";
+import {addToast} from "@heroui/toast";
 
 type Props = {
     pokemon: PokemonPropiedades;
@@ -18,6 +22,7 @@ export default function PokemonDetailPage({pokemon, species}: Props) {
 
     const {data: favoritesPokemon = []} = useFavoritesPokemon();
     const [error, setError] = useState<string | null>(null);
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     const addFavorite = useAddFavorite();
     const removeFavorite = useDeleteFavorite();
@@ -34,16 +39,61 @@ export default function PokemonDetailPage({pokemon, species}: Props) {
 
         setError(null);
 
-        try {
-            if (isFavorite) {
+        if (isFavorite) {
+            try {
                 await removeFavorite.mutateAsync(pokemon.id);
-            } else {
-                const favData = toFavoritePokemon(pokemon);
-                await addFavorite.mutateAsync(favData);
+            } catch (err) {
+                setError("Error al quitar de favoritos");
+                setTimeout(() => setError(null), 3000);
+            }
+        } else {
+            onOpen();
+        }
+    };
+
+    const handleFormSuccess = async (values: FormValues) => {
+        try {
+            const favData = toFavoritePokemon(pokemon, values.name || "", values.description || "");
+            await addFavorite.mutateAsync(favData);
+            {
+                addToast({
+                    title: "FAVORITOS",
+                    description: `El pokemon ${pokemon.name} se agregó correctamente a favoritos!`,
+                    color: "success",
+                    variant: "bordered",
+                    icon: (
+                        <Image
+                            src={pokemon.sprites.other["official-artwork"].front_default}
+                            alt={pokemon.name}
+                            height={50}
+                            width={50}
+                        />
+                    ),
+                    classNames: {
+                        closeButton: "opacity-100 absolute right-4 top-1/2 -translate-y-1/2",
+                    },
+                    closeIcon: (
+                        <svg
+                            fill="none"
+                            height="32"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            width="32"
+                        >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    ),
+
+                });
             }
         } catch (err) {
-            setError(isFavorite ? "Error al quitar de favoritos" : "Error al agregar a favoritos");
+            setError("Error al agregar a favoritos");
             setTimeout(() => setError(null), 3000);
+            throw err;
         }
     };
 
@@ -197,6 +247,13 @@ export default function PokemonDetailPage({pokemon, species}: Props) {
 
                 </div>
             </div>
+
+            <PokemonFavoriteModal
+                isOpen={isOpen}
+                onOpenChange={onOpenChange}
+                pokemon={pokemon}
+                onSuccess={handleFormSuccess}
+            />
         </div>
     );
 }

@@ -5,6 +5,7 @@ import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
 import QueryProvider from "@/lib/queryProvider";
 import ScrollToTopButton from "@/components/scrollToTopButton";
+import {Providers} from "./providers";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,36 +28,24 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="es" className="dark">
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
+        <Providers>
+            <QueryProvider>
+                <header className="relative z-50">
+                    <NavBar/>
+                </header>
 
-        <QueryProvider>
-
-            <header className="relative z-50">
-                <NavBar/>
-            </header>
-
-            <main className="flex-grow relative pt-20">
-                <div
-                    className="absolute inset-0 opacity-10 -z-10"
-                    style={{
-                        backgroundImage: "url('/diagonal-stripes.svg')",
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: '300px',
-                    }}
-                />
-
-                <div className="relative z-0">
+                <main className="flex-grow relative pt-20 z-10">
                     {children}
                     <ScrollToTopButton/>
-                </div>
-            </main>
+                </main>
 
-            <Footer/>
-
-        </QueryProvider>
+                <Footer/>
+            </QueryProvider>
+        </Providers>
         </body>
         </html>
     );

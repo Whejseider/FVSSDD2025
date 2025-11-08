@@ -10,6 +10,8 @@ export const favoritesPokemonService = {
     add: async (favoritePokemon: {
         id: number,
         name: string,
+        alias: string,
+        description: string,
         sprite: string,
         types: string[],
         height: number,

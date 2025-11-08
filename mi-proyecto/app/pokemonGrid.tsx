@@ -14,7 +14,7 @@ function isPokemonPropiedades(pokemon: any): pokemon is PokemonPropiedades {
 
 export default function PokemonGrid({pokemon}: PokemonGridProps) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {pokemon.map((poke) => {
                 if (isPokemonPropiedades(poke)) {
                     return <PokemonCard key={poke.id} pokemon={poke} />;

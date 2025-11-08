@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Se pueden agregar o remover de favoritos de la pagina de detalles">
+    <list default="true" id="dd356dd1-94fb-4f76-9746-15434ba7b0b3" name="Changes" comment="Ahora utilizo ID's para las rutas de los pokemons, asi no se me complican con algunos nombres (deoxys-normal....)">
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/hero.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/app/providers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mi-proyecto/validations/favoritePokemonValidation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/api/favorites/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/favorites/components/pokemonFavoriteCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/not-found.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[name]/pokemonDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/pokemonDetailPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/pokemonDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemon/[id]/pokemonDetailPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/app/pokemonGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/pokemonCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/database.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/pokeApiServices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/components/skeletonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/components/skeletonCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/lib/types/favorites/favorites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/lib/types/favorites/favorites.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mi-proyecto/services/favorites.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="actividad6" />
+        <entry key="$PROJECT_DIR$" value="actividad7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +87,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "actividad7",
+    "git-widget-placeholder": "actividad8",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "22.19.0",
     "javascript.nodejs.core.library.typings.version": "22.18.0",
@@ -98,11 +110,11 @@
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app\pokemon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\lib\types" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\mi-proyecto\app\services" />
       <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025" />
-      <recent name="C:\Users\Franco\WebstormProjects\FVSSDD2025\Clase1\Ejercicio_practico" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -141,7 +153,9 @@
       <workItem from="1760930968107" duration="5427000" />
       <workItem from="1761017818752" duration="8566000" />
       <workItem from="1761067729894" duration="5840000" />
-      <workItem from="1761073648462" duration="3232000" />
+      <workItem from="1761073648462" duration="3688000" />
+      <workItem from="1761605045993" duration="17000" />
+      <workItem from="1762551833860" duration="14894000" />
     </task>
     <task id="LOCAL-00001" summary="Un par de ejemplos">
       <option name="closed" value="true" />
@@ -439,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761074895974</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Ahora utilizo ID's para las rutas de los pokemons, asi no se me complican con algunos nombres (deoxys-normal....)">
+      <option name="closed" value="true" />
+      <created>1761077078626</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1761077078626</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +478,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="actividad7" />
+                        <option value="actividad8" />
                       </list>
                     </value>
                   </entry>
@@ -469,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Formato" />
     <MESSAGE value="Mejoras diseño" />
     <MESSAGE value="Cambio color fondo" />
     <MESSAGE value="Preparando actividad 5" />
@@ -494,6 +515,7 @@
     <MESSAGE value="Agrego mas datos a la bd" />
     <MESSAGE value="Página de favoritos" />
     <MESSAGE value="Se pueden agregar o remover de favoritos de la pagina de detalles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se pueden agregar o remover de favoritos de la pagina de detalles" />
+    <MESSAGE value="Ahora utilizo ID's para las rutas de los pokemons, asi no se me complican con algunos nombres (deoxys-normal....)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ahora utilizo ID's para las rutas de los pokemons, asi no se me complican con algunos nombres (deoxys-normal....)" />
   </component>
 </project>

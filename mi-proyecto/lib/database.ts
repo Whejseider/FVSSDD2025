@@ -34,6 +34,8 @@ class Database {
         const newFavoritePokemon: FavoritePokemon = {
             id: pokemon.id,
             name: pokemon.name,
+            alias: pokemon.alias || "",
+            description: pokemon.description || "",
             sprite: pokemon.sprite,
             types: pokemon.types,
             height: pokemon.height,
